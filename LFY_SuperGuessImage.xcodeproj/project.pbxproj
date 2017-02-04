@@ -15,6 +15,8 @@
 		83D29A201E45B89800D76121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D29A1E1E45B89800D76121 /* LaunchScreen.storyboard */; };
 		83D29A2B1E45B89800D76121 /* LFY_SuperGuessImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D29A2A1E45B89800D76121 /* LFY_SuperGuessImageTests.m */; };
 		83D29A361E45B89800D76121 /* LFY_SuperGuessImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D29A351E45B89800D76121 /* LFY_SuperGuessImageUITests.m */; };
+		83D29A451E45D8FF00D76121 /* QuestionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D29A441E45D8FF00D76121 /* QuestionInfo.m */; };
+		83D29A471E45D90F00D76121 /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83D29A461E45D90E00D76121 /* questions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		83D29A311E45B89800D76121 /* LFY_SuperGuessImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFY_SuperGuessImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D29A351E45B89800D76121 /* LFY_SuperGuessImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFY_SuperGuessImageUITests.m; sourceTree = "<group>"; };
 		83D29A371E45B89800D76121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83D29A431E45D8FF00D76121 /* QuestionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionInfo.h; sourceTree = "<group>"; };
+		83D29A441E45D8FF00D76121 /* QuestionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionInfo.m; sourceTree = "<group>"; };
+		83D29A461E45D90E00D76121 /* questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = questions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,8 @@
 				83D29A141E45B89800D76121 /* AppDelegate.m */,
 				83D29A161E45B89800D76121 /* ViewController.h */,
 				83D29A171E45B89800D76121 /* ViewController.m */,
+				83D29A431E45D8FF00D76121 /* QuestionInfo.h */,
+				83D29A441E45D8FF00D76121 /* QuestionInfo.m */,
 				83D29A191E45B89800D76121 /* Main.storyboard */,
 				83D29A1C1E45B89800D76121 /* Assets.xcassets */,
 				83D29A1E1E45B89800D76121 /* LaunchScreen.storyboard */,
@@ -117,6 +124,7 @@
 		83D29A101E45B89800D76121 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83D29A461E45D90E00D76121 /* questions.plist */,
 				83D29A111E45B89800D76121 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -249,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D29A471E45D90F00D76121 /* questions.plist in Resources */,
 				83D29A201E45B89800D76121 /* LaunchScreen.storyboard in Resources */,
 				83D29A1D1E45B89800D76121 /* Assets.xcassets in Resources */,
 				83D29A1B1E45B89800D76121 /* Main.storyboard in Resources */,
@@ -277,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D29A181E45B89800D76121 /* ViewController.m in Sources */,
+				83D29A451E45D8FF00D76121 /* QuestionInfo.m in Sources */,
 				83D29A151E45B89800D76121 /* AppDelegate.m in Sources */,
 				83D29A121E45B89800D76121 /* main.m in Sources */,
 			);
@@ -425,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N6P88TN8F;
 				INFOPLIST_FILE = LFY_SuperGuessImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -437,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9N6P88TN8F;
 				INFOPLIST_FILE = LFY_SuperGuessImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
