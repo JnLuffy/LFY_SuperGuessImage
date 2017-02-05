@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "QuestionInfo.h"
+
+CGFloat const imageW = 150;
+#define kScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
 /**
@@ -45,7 +49,6 @@
  */
 @property (nonatomic,strong) UIButton *cover;
 
-
 @end
 
 @implementation ViewController
@@ -74,10 +77,65 @@
 }
 - (IBAction)helpBtnOnclick:(id)sender {
 }
+
+
+/**
+ 大图/遮盖/中间 3个按钮的点击事件
+
+ @param sender <#sender description#>
+ */
 - (IBAction)imgBtnChangeOnClick:(id)sender {
-    NSLog(@"imgBtnChangeOnClick");
+    //将中间图片按钮设置成距离屏幕最近的一层
+    [self.view bringSubviewToFront:self.guessBtn];
+    //
+    if(0 == self.cover.alpha) {
+        //图片放大事件
+        CGFloat scaleX = kScreenW/imageW;
+        CGFloat translateY = self.guessBtn.frame.origin.y / scaleX;
+
+        [UIView animateWithDuration:1.0 animations:^{
+            self.guessBtn.transform = CGAffineTransformMakeScale(scaleX, scaleX);
+            //遮盖显现
+            self.guessBtn.transform = CGAffineTransformTranslate(self.guessBtn.transform, 0, translateY);
+            self.cover.alpha = 0.5;
+        }];
+    } else{
+        //图片还原事件
+        [UIView animateWithDuration:1.0 animations:^{
+            self.guessBtn.transform = CGAffineTransformIdentity;
+            self.cover.alpha = 0.0;
+        }];
+    }
 }
 - (IBAction)nextBtnOnClick:(id)sender {
 }
 
+/**
+ * 懒加载
+ * @return 模型数组
+ */
+-(NSArray *)questions{
+    if(!_questions){
+        _questions = [QuestionInfo questions];
+    }
+    return _questions;
+}
+
+
+/**
+  懒加载
+
+ @return 遮盖
+ */
+- (UIButton *)cover{
+    if(!_cover){
+        _cover = [[UIButton alloc]init];
+        _cover.frame = self.view.bounds;
+        _cover.alpha = 0.0;
+        _cover.backgroundColor = [UIColor blackColor];
+        [_cover addTarget:self action:@selector(imgBtnChangeOnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_cover];
+    }
+    return _cover;
+}
 @end
