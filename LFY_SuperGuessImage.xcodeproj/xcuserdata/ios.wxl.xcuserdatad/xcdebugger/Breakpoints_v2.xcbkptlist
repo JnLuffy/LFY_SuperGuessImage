@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LFY_SuperGuessImage/ViewController.m"
+            timestampString = "508037401.249361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "-opitonBtnOnClick:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController opitonBtnOnClick:]"
+                  moduleName = "LFY_SuperGuessImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios.wxl/Luffy/OC_Swift_Exercise/OC_TEST/LFY_SuperGuessImage/LFY_SuperGuessImage/ViewController.m"
+                  timestampString = "508037401.472586"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController opitonBtnOnClick:]"
+                  moduleName = "LFY_SuperGuessImage"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ios.wxl/Luffy/OC_Swift_Exercise/OC_TEST/LFY_SuperGuessImage/LFY_SuperGuessImage/ViewController.m"
+                  timestampString = "508037401.473957"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
